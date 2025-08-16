@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins' 'sans-serif';
+}
+body{
+    background: #222;
+}
+.card{
+    width:90%;
+    max-width: 470px;
+    background-color: #fff9c4;
+     color: #5d4037;
+    margin: 50px auto 0px;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 45px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button{
+     border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img{
+    width: 16px;
+}
+
+.w-icon{
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1{
+    font-size:80px ;
+    font-weight: 500;
+}
+
+.weather h2{
+    font-size:40px ;
+    font-weight: 400;
+    margin-top: -10px;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin-top: 50px;
+}
+.col{
+    display:flex;
+    align-items: center;
+    text-align: left;
+}
+.col img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity,.wind{
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+/* toggle */
+ body {
+            transition: background-color 0.3s ease;
+        }
+        body.day {
+            background-color: #faf8ef; /* Light day background */
+            color: #000;
+        }
+.cday {
+    background-color: #fff9c4; /* soft yellow card */
+      color: #5d4037;
+    transition: background-color 1s ease;
+}
+
+.cnight{
+        background: linear-gradient(135deg,#00feba,#5b548a);
+    color:#fff;
+}
+        body.night {
+            background-color: #001f3f; /* Dark night background */
+            color: #fff;
+        }
+        .toggle-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .toggle {
+            position: relative;
+            width: 80px; /* Kept width for coverage */
+            height: 40px; /* Kept height for nature scene */
+        }
+        .toggle input {
+            display: none;
+        }
+        .toggle label {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 30px; /* Rounded for button feel */
+            position: relative;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        .toggle svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .toggle .day-svg {
+            left: 0; /* Fixed day scene */
+        }
+        .toggle .night-svg {
+            left: -100%; /* Start off-screen left */
+            transition: left 0.3s ease; /* Slide transition */
+        }
+        .toggle input:checked + label .night-svg {
+            left: 0; /* Slide in from left to right */
+        }
+        /* Optional: Slight scale on active for interactivity */
+        .toggle label:active {
+            transform: scale(1.02);
+            transition: transform 0.1s;
+        }
+
+
+.weather{
+    display: none;
+}
+
+.error{
+    text-align: left;
+    margin-left: 10px;
+    font: size 14px;
+    margin-top: 10px;
+    display: none;
+
+}

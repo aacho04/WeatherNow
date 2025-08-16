@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+       
+    
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="day"> <!-- Start with day mode -->
+    <div class="toggle-container">
+        <div class="toggle">
+            <input type="checkbox" id="day-night-toggle">
+            <label for="day-night-toggle">
+                <!-- Day Scene SVG covering the whole toggle -->
+                <svg class="day-svg" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Sky -->
+                    <rect x="0" y="0" width="120" height="60" fill="#87ceeb" />
+                    <!-- Sun with rays -->
+                    <g transform="translate(90 20)">
+                        <circle cx="0" cy="0" r="8" fill="#FFD700" />
+                        <line x1="0" y1="-12" x2="0" y2="-8" stroke="#FFD700" stroke-width="2" />
+                        <line x1="0" y1="8" x2="0" y2="12" stroke="#FFD700" stroke-width="2" />
+                        <line x1="-12" y1="0" x2="-8" y2="0" stroke="#FFD700" stroke-width="2" />
+                        <line x1="8" y1="0" x2="12" y2="0" stroke="#FFD700" stroke-width="2" />
+                        <line x1="-8" y1="-8" x2="-6" y2="-6" stroke="#FFD700" stroke-width="2" transform="rotate(-45)" />
+                        <line x1="6" y1="-6" x2="8" y2="-8" stroke="#FFD700" stroke-width="2" transform="rotate(45)" />
+                        <line x1="-8" y1="8" x2="-6" y2="6" stroke="#FFD700" stroke-width="2" transform="rotate(45)" />
+                        <line x1="6" y1="6" x2="8" y2="8" stroke="#FFD700" stroke-width="2" transform="rotate(-45)" />
+                    </g>
+                    <!-- Improved Fluffy Clouds (using arc-based paths for pleasing shape) -->
+                    <g fill="white">
+                        <!-- Cloud 1 -->
+                        <path d="M10 30 a10 10 1 0 0 0 20 h25 a10 10 1 0 0 0 -20 a5 5 1 0 0 -7.5 -5 a7.5 7.5 1 0 0 -17.5 5 z" />
+                        <!-- Cloud 2 (scaled and translated) -->
+                        <path d="M60 35 a8 8 1 0 0 0 16 h20 a8 8 1 0 0 0 -16 a4 4 1 0 0 -6 -4 a6 6 1 0 0 -14 4 z" />
+                    </g>
+                    <!-- Wavy Ground for nature theme -->
+                    <path d="M0 50 Q30 45 60 50 Q90 55 120 50 L120 60 L0 60 Z" fill="#228B22" />
+                </svg>
+                <!-- Night Scene SVG covering the whole toggle -->
+                <svg class="night-svg" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Sky -->
+                    <rect x="0" y="0" width="120" height="60" fill="#001f3f" />
+                    <!-- Moon with craters -->
+                    <circle cx="30" cy="20" r="8" fill="#C0C0C0" />
+                    <circle cx="27" cy="18" r="1.5" fill="#A9A9A9" />
+                    <circle cx="33" cy="22" r="2" fill="#A9A9A9" />
+                    <circle cx="28" cy="23" r="1" fill="#A9A9A9" />
+                    <!-- Stars -->
+                    <circle cx="50" cy="10" r="1" fill="white" />
+                    <circle cx="70" cy="15" r="0.5" fill="white" />
+                    <circle cx="100" cy="8" r="1" fill="white" />
+                    <circle cx="110" cy="20" r="0.7" fill="white" />
+                    <!-- Improved Fluffy Clouds (darker for night) -->
+                    <g fill="#CCCCCC">
+                        <!-- Cloud 1 -->
+                        <path d="M10 30 a10 10 1 0 0 0 20 h25 a10 10 1 0 0 0 -20 a5 5 1 0 0 -7.5 -5 a7.5 7.5 1 0 0 -17.5 5 z" />
+                        <!-- Cloud 2 (scaled and translated) -->
+                        <path d="M60 35 a8 8 1 0 0 0 16 h20 a8 8 1 0 0 0 -16 a4 4 1 0 0 -6 -4 a6 6 1 0 0 -14 4 z" />
+                    </g>
+                    <!-- Wavy Ground for nature theme (darker) -->
+                    <path d="M0 50 Q30 45 60 50 Q90 55 120 50 L120 60 L0 60 Z" fill="#006400" />
+                </svg>
+            </label>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="card cday">
+        <div class="search" >
+            <input type="text" placeholder="Enter city name" spellcheck="falses" id="city">
+            <button><img src="search.png" alt="search" id="search"></button>
+        </div>
+        <div class="error"><P>Invalid City name</P></div>
+     <div class="weather">
+        <img src="rain.png" alt="rain" class="w-icon">
+        <h1 class="temp">22<sup>o</sup>C</h1>
+        <h2 class="city">New York</h2>
+        <div class="details">
+            <div class="col">
+                <img src="humidity.png" alt="humidity">
+                <div>
+                    <p class="humidity">50%</p>
+                    <p>Humidity</p>
+                </div>
+            </div>
+             <div class="col">
+                <img src="wind.png" alt="wind">
+                <div>
+                    <p class="wind">15 km/hr</p>
+                    <p>Wind-Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+   
+</body>
+</html>
